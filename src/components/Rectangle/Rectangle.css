@@ -1,0 +1,19 @@
+.btn-button-true {
+    background-color: Transparent;
+    color:#1797ff;
+    width: 98px;
+    height: 31px;
+    border-radius: 2px;
+    border: solid 1px #1797ff;
+    cursor: pointer;
+}
+
+.btn-button-false {
+    background-color: Transparent;
+    color:#606060;
+    width: 98px;
+    height: 31px;
+    border-radius: 2px;
+    border: solid 1px #606060;
+    cursor: pointer;
+}
