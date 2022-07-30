@@ -2,10 +2,10 @@ import './News.css'
 import LikeBox from './LikeBox/Likebox.jsx'
 import ClockImg from './assets/iconmonstr-time-2.png'
 import { useEffect, useState } from 'react'
-const News = ({ story, likeList, setLikeList, all }) => {
+const News = ({story, likeList, setLikeList, all }) => {
 
 
-    const { author, story_title, story_url, created_at, story_id, parent_id } = story
+    const { author, story_title, story_url, created_at } = story
 
     const [like, setLike] = useState(false);
 
@@ -26,10 +26,10 @@ const News = ({ story, likeList, setLikeList, all }) => {
                 author && story_title && story_url && created_at ?
                     all === true ?
                         <div className="Rectangle-news">
-                            <a href={story_url} target="_blank" style={{ textDecoration: 'none' }}>
+                            <a href={story_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
                                 <div className='main'>
                                     <div>
-                                        <img src={ClockImg} class="iconmonstr-time-2" />
+                                        <img src={ClockImg} alt="" className="iconmonstr-time-2" />
                                         <span className="-hours-ago-by-autho">
                                             {created_at} ago by {author}
                                         </span>
@@ -44,10 +44,10 @@ const News = ({ story, likeList, setLikeList, all }) => {
                             </div>
                         </div> : like === true ?
                             <div className="Rectangle-news">
-                                <a href={story_url} target="_blank" style={{ textDecoration: 'none' }}>
+                                <a href={story_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
                                     <div className='main'>
                                         <div>
-                                            <img src={ClockImg} class="iconmonstr-time-2" />
+                                            <img src={ClockImg} alt="" className="iconmonstr-time-2" />
                                             <span className="-hours-ago-by-autho">
                                                 {created_at} ago by {author}
                                             </span>

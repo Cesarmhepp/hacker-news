@@ -54,8 +54,8 @@ const Home = () => {
                     <div className="scroll">
                         <div className='flex-container-list'>
                             {
-                                news.map((story) => {
-                                    return <News story={story} likeList={likeList} setLikeList={setLikeList} all={all} />
+                                news.map((story, i) => {
+                                    return <News key={i} story={story} likeList={likeList} setLikeList={setLikeList} all={all} />
                                 })
                             }
                         </div>
