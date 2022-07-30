@@ -3,7 +3,6 @@ import Select from 'react-select'
 import Angular from './img/image-138.png'
 import React from './img/image-140.png'
 import VueJs from './img/image-141.png'
-import { width } from '@mui/system'
 
 const DropDownMenu = ({ setTech, tech }) => {
 
@@ -30,7 +29,7 @@ const DropDownMenu = ({ setTech, tech }) => {
             defaultValue={tech}
             formatOptionLabel={item => (
                 <div className='item'>
-                    <img src={item.image} alt="country-image" />
+                    <img src={item.image} alt="" />
                     <span style={{ marginLeft: '5px' }}>{item.label}</span>
                 </div>
             )}

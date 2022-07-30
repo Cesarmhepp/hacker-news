@@ -5,6 +5,8 @@
   border-radius: 6px;
   border: solid 1px #979797;
   text-align: start;
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .Rectangle-like {
@@ -61,4 +63,8 @@ img.iconmonstr-time-2 {
 .main {
   width: 85%;
   float: left;
+}
+
+.Rectangle-news:hover {
+  opacity: 0.5
 }

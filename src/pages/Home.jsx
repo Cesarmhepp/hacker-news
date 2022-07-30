@@ -39,6 +39,7 @@ const Home = () => {
     useEffect(() => {
         localStorage.setItem('likelist', JSON.stringify(likeList));
     }, [likeList])
+    
 
     return (
         <>
@@ -54,7 +55,7 @@ const Home = () => {
                     <div className="scroll">
                         <div className='flex-container-list'>
                             {
-                                news.map((story, i) => {
+                                news.map((story,i) => {
                                     return <News key={i} story={story} likeList={likeList} setLikeList={setLikeList} all={all} />
                                 })
                             }

@@ -2,21 +2,25 @@ import './News.css'
 import LikeBox from './LikeBox/Likebox.jsx'
 import ClockImg from './assets/iconmonstr-time-2.png'
 import { useEffect, useState } from 'react'
-const News = ({story, likeList, setLikeList, all }) => {
+const News = ({ story, likeList, setLikeList, all }) => {
 
 
     const { author, story_title, story_url, created_at } = story
-
     const [like, setLike] = useState(false);
 
     useEffect(() => {
-        const val = likeList.find((item) => item.created_at_i === story.created_at_i)
+        const val = likeList.find((item) =>
+            item.created_at_i === story.created_at_i
+            && item.story_title === story.story_title
+            && item.created_at === story.created_at
+            && item.story_id === story.story_id
+            && item.parent_id === story.parent_id
+        )
         if (val) {
-            if (val.like === true) {
-                if (like === false) {
-                    setLike(true)
-                }
+            if (like === false) {
+                setLike(true)
             }
+
         }
     }, [likeList, story, like])
 
